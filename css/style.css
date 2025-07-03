@@ -28,6 +28,7 @@ body {
     color: var(--text-dark);
     background-color: var(--white);
     direction: rtl;
+    padding-top: 80px; /* منع تداخل الهيدر مع المحتوى */
 }
 
 .container {
@@ -1204,5 +1205,211 @@ img.loaded {
 
 .transform-hover:hover {
     transform: translateY(-5px);
+}
+
+
+
+/* Force Light Mode - منع تأثير الوضع الليلي */
+html {
+    color-scheme: light only !important;
+}
+
+body {
+    background-color: var(--white) !important;
+    color: var(--text-dark) !important;
+}
+
+/* منع تغيير الألوان في الوضع الليلي */
+* {
+    color-scheme: light !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #D4AF37 !important;
+        --primary-dark: #B8941F !important;
+        --secondary-color: #2C3E50 !important;
+        --accent-color: #E74C3C !important;
+        --text-dark: #2C3E50 !important;
+        --text-light: #7F8C8D !important;
+        --white: #FFFFFF !important;
+        --light-bg: #F8F9FA !important;
+        --border-color: #E9ECEF !important;
+    }
+    
+    body {
+        background-color: #FFFFFF !important;
+        color: #2C3E50 !important;
+    }
+    
+    .header {
+        background: rgba(255, 255, 255, 0.95) !important;
+    }
+    
+    .footer {
+        background: #2C3E50 !important;
+        color: #FFFFFF !important;
+    }
+    
+    .page-header {
+        background: linear-gradient(135deg, #D4AF37, #B8941F) !important;
+        color: #FFFFFF !important;
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.9), rgba(184, 148, 31, 0.9)) !important;
+        color: #FFFFFF !important;
+    }
+}
+
+
+/* تعزيز منع الوضع الليلي */
+html, body, * {
+    background-color: #FFFFFF !important;
+    color: #2C3E50 !important;
+    color-scheme: light !important;
+}
+
+/* منع تغيير الألوان في جميع العناصر */
+div, section, header, footer, nav, main, article, aside {
+    background-color: inherit !important;
+    color: inherit !important;
+}
+
+/* الحفاظ على ألوان العناصر المحددة */
+.header {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: #2C3E50 !important;
+}
+
+.footer {
+    background: #2C3E50 !important;
+    color: #FFFFFF !important;
+}
+
+.page-header, .hero {
+    background: linear-gradient(135deg, #D4AF37, #B8941F) !important;
+    color: #FFFFFF !important;
+}
+
+.btn-primary {
+    background: #D4AF37 !important;
+    color: #FFFFFF !important;
+}
+
+.whatsapp-btn, .whatsapp-float {
+    background: #25D366 !important;
+    color: #FFFFFF !important;
+}
+
+/* منع تأثير الوضع الليلي على النصوص */
+h1, h2, h3, h4, h5, h6, p, span, a, li {
+    color: inherit !important;
+}
+
+/* منع تأثير الوضع الليلي على الخلفيات */
+.light-bg, .about-section:nth-child(even) {
+    background: #F8F9FA !important;
+}
+
+.stat-card, .value-card, .timeline-content {
+    background: #FFFFFF !important;
+    color: #2C3E50 !important;
+}
+
+/* إجبار الألوان في جميع الحالات */
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background: #FFFFFF !important;
+        color: #2C3E50 !important;
+        filter: none !important;
+    }
+    
+    * {
+        background-color: inherit !important;
+        color: inherit !important;
+        filter: none !important;
+    }
+}
+
+/* منع أي فلاتر أو تأثيرات */
+* {
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+.header {
+    backdrop-filter: blur(10px) !important;
+}
+
+
+/* تحسين قائمة التنقل للموبايل */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed !important;
+        top: 70px !important;
+        right: -100% !important;
+        width: 100% !important;
+        height: calc(100vh - 70px) !important;
+        background: var(--white) !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        padding: 2rem 0 !important;
+        transition: right 0.3s ease !important;
+        box-shadow: var(--shadow) !important;
+        z-index: 999 !important;
+        overflow-y: auto !important;
+    }
+
+    .nav-menu.active {
+        right: 0 !important;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0 !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .nav-link {
+        display: block !important;
+        padding: 1rem 2rem !important;
+        font-size: 1.1rem !important;
+        border-bottom: 1px solid var(--border-color) !important;
+        width: 100% !important;
+        color: var(--text-dark) !important;
+    }
+
+    .nav-link:hover {
+        background: var(--light-bg) !important;
+        color: var(--primary-color) !important;
+    }
+
+    .mobile-menu-btn {
+        display: flex !important;
+        z-index: 1000 !important;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px) !important;
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px) !important;
+    }
+
+    .nav-actions {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .whatsapp-btn {
+        order: 2 !important;
+    }
 }
 

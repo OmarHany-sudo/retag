@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات - رتاج للتجارة والتوريدات</title>
+    <meta name="description" content="تصفح مجموعتنا الواسعة من مستلزمات الفنادق والمستشفيات عالية الجودة">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="images/1000363201.jpg" alt="رتاج للتجارة والتوريدات" class="logo">
+                    <span class="brand-text">رتاج للتجارة والتوريدات</span>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                        <li><a href="products.html" class="nav-link active">المنتجات</a></li>
+                        <li><a href="about.html" class="nav-link">من نحن</a></li>
+                        <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+                        <li><a href="quote.html" class="nav-link btn-quote">اطلب عرض سعر</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="https://wa.me/201012006376" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        واتساب
+                    </a>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="products-header">
+                <h1>منتجاتنا</h1>
+                <p>تصفح مجموعتنا الواسعة من مستلزمات الفنادق والمستشفيات عالية الجودة</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="catalog.html" class="btn btn-primary">
+                        <i class="fas fa-book"></i>
+                        عرض الكتالوج الكامل
+                    </a>
+                </div>
+            </div>
+            
+            <nav class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span>/</span>
+                <span>المنتجات</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Search and Filter -->
+            <div class="products-controls">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="ابحث عن منتج...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">جميع المنتجات</button>
+                    <button class="filter-btn" data-category="mats">الدواسات</button>
+                    <button class="filter-btn" data-category="trolleys">العربات</button>
+                    <button class="filter-btn" data-category="coffee">ماكينات القهوة</button>
+                    <button class="filter-btn" data-category="bins">صناديق القمامة</button>
+                    <button class="filter-btn" data-category="furniture">الأثاث</button>
+                    <button class="filter-btn" data-category="cleaning">أدوات التنظيف</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- Entrance Mats -->
+                <div class="product-card" data-category="mats">
+                    <div class="product-image">
+                        <img src="images/1000363253.jpg" alt="دواسات المداخل">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('دواسات المداخل')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>دواسات المداخل</h3>
+                        <p>دواسات عالية الجودة للمداخل والممرات، متوفرة بأحجام وألوان مختلفة</p>
+                        <div class="product-features">
+                            <span class="feature">مقاومة للانزلاق</span>
+                            <span class="feature">سهلة التنظيف</span>
+                            <span class="feature">متينة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rubber Mats -->
+                <div class="product-card" data-category="mats">
+                    <div class="product-image">
+                        <img src="images/1000363253.jpg" alt="الدواسات المطاطية">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('الدواسات المطاطية')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>الدواسات المطاطية</h3>
+                        <p>دواسات مطاطية متنوعة للاستخدامات المختلفة في الفنادق والمستشفيات</p>
+                        <div class="product-features">
+                            <span class="feature">مطاط عالي الجودة</span>
+                            <span class="feature">مقاومة للمواد الكيميائية</span>
+                            <span class="feature">متعددة الاستخدامات</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Housekeeping Trolleys -->
+                <div class="product-card" data-category="trolleys">
+                    <div class="product-image">
+                        <img src="images/1000363253.jpg" alt="عربات التنظيف">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('عربات التنظيف')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>عربات التنظيف</h3>
+                        <p>عربات تنظيف متخصصة للفنادق مع جميع الملحقات اللازمة</p>
+                        <div class="product-features">
+                            <span class="feature">متعددة الأدراج</span>
+                            <span class="feature">عجلات عالية الجودة</span>
+                            <span class="feature">تصميم عملي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Public Area Trolleys -->
+                <div class="product-card" data-category="trolleys">
+                    <div class="product-image">
+                        <img src="images/1000363253.jpg" alt="عربات المناطق العامة">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('عربات المناطق العامة')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>عربات المناطق العامة</h3>
+                        <p>عربات خدمة للمناطق العامة في الفنادق والمؤسسات</p>
+                        <div class="product-features">
+                            <span class="feature">تصميم أنيق</span>
+                            <span class="feature">سهولة الحركة</span>
+                            <span class="feature">مساحة تخزين كبيرة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Trolleys -->
+                <div class="product-card" data-category="trolleys">
+                    <div class="product-image">
+                        <img src="images/1000363253.jpg" alt="عربات الخدمة">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('عربات الخدمة')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>عربات الخدمة</h3>
+                        <p>عربات خدمة متنوعة للمطاعم والفنادق والمستشفيات</p>
+                        <div class="product-features">
+                            <span class="feature">ستانلس ستيل</span>
+                            <span class="feature">سهلة التنظيف</span>
+                            <span class="feature">متينة ومقاومة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee Machines -->
+                <div class="product-card" data-category="coffee">
+                    <div class="product-image">
+                        <img src="images/1000363253.jpg" alt="ماكينات القهوة">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('ماكينات القهوة')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>ماكينات القهوة</h3>
+                        <p>ماكينات قهوة احترافية للفنادق والمطاعم والمكاتب</p>
+                        <div class="product-features">
+                            <span class="feature">تقنية متقدمة</span>
+                            <span class="feature">سهولة الاستخدام</span>
+                            <span class="feature">جودة عالية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luggage Trolleys -->
+                <div class="product-card" data-category="trolleys">
+                    <div class="product-image">
+                        <img src="images/1000363254.jpg" alt="عربات الأمتعة">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('عربات الأمتعة')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>عربات الأمتعة</h3>
+                        <p>عربات نقل الأمتعة للفنادق والمطارات</p>
+                        <div class="product-features">
+                            <span class="feature">حمولة عالية</span>
+                            <span class="feature">تصميم مريح</span>
+                            <span class="feature">عجلات صامتة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cleaning Trolleys -->
+                <div class="product-card" data-category="cleaning">
+                    <div class="product-image">
+                        <img src="images/1000363255.jpg" alt="عربات التنظيف المتخصصة">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('عربات التنظيف المتخصصة')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>عربات التنظيف المتخصصة</h3>
+                        <p>عربات تنظيف متقدمة مع جميع الأدوات والملحقات</p>
+                        <div class="product-features">
+                            <span class="feature">تنظيم ممتاز</span>
+                            <span class="feature">أدوات متكاملة</span>
+                            <span class="feature">سهولة الاستخدام</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dustbins -->
+                <div class="product-card" data-category="bins">
+                    <div class="product-image">
+                        <img src="images/1000363255.jpg" alt="صناديق القمامة">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('صناديق القمامة')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>صناديق القمامة</h3>
+                        <p>صناديق قمامة بأحجام وأشكال مختلفة للاستخدامات المتنوعة</p>
+                        <div class="product-features">
+                            <span class="feature">مواد عالية الجودة</span>
+                            <span class="feature">أحجام متنوعة</span>
+                            <span class="feature">سهلة التنظيف</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recycling Bins -->
+                <div class="product-card" data-category="bins">
+                    <div class="product-image">
+                        <img src="images/1000363255.jpg" alt="صناديق إعادة التدوير">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('صناديق إعادة التدوير')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>صناديق إعادة التدوير</h3>
+                        <p>صناديق إعادة تدوير متخصصة لفرز النفايات</p>
+                        <div class="product-features">
+                            <span class="feature">فرز متعدد</span>
+                            <span class="feature">ألوان مميزة</span>
+                            <span class="feature">صديقة للبيئة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wooden Ashtrays -->
+                <div class="product-card" data-category="furniture">
+                    <div class="product-image">
+                        <img src="images/1000363256.jpg" alt="منافض خشبية">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('منافض خشبية')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>منافض خشبية</h3>
+                        <p>منافض سجائر خشبية أنيقة للمناطق المخصصة للتدخين</p>
+                        <div class="product-features">
+                            <span class="feature">خشب طبيعي</span>
+                            <span class="feature">تصميم أنيق</span>
+                            <span class="feature">مقاومة للحرارة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cleaning Tools -->
+                <div class="product-card" data-category="cleaning">
+                    <div class="product-image">
+                        <img src="images/1000363256.jpg" alt="أدوات التنظيف">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('أدوات التنظيف')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>أدوات التنظيف</h3>
+                        <p>أدوات تنظيف متنوعة وعالية الجودة للاستخدام المهني</p>
+                        <div class="product-features">
+                            <span class="feature">جودة احترافية</span>
+                            <span class="feature">متينة ومقاومة</span>
+                            <span class="feature">سهلة الاستخدام</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chairs -->
+                <div class="product-card" data-category="furniture">
+                    <div class="product-image">
+                        <img src="images/1000363257.jpg" alt="الكراسي">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('الكراسي')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>الكراسي</h3>
+                        <p>كراسي متنوعة للاستخدامات المختلفة في الفنادق والمطاعم</p>
+                        <div class="product-features">
+                            <span class="feature">تصميمات متنوعة</span>
+                            <span class="feature">راحة عالية</span>
+                            <span class="feature">مواد عالية الجودة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tables -->
+                <div class="product-card" data-category="furniture">
+                    <div class="product-image">
+                        <img src="images/1000363257.jpg" alt="الطاولات">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('الطاولات')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>الطاولات</h3>
+                        <p>طاولات بأحجام وأشكال مختلفة للمطاعم والفنادق</p>
+                        <div class="product-features">
+                            <span class="feature">أحجام متنوعة</span>
+                            <span class="feature">تصميم عملي</span>
+                            <span class="feature">مقاومة للخدش</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machines -->
+                <div class="product-card" data-category="cleaning">
+                    <div class="product-image">
+                        <img src="images/1000363258.jpg" alt="الماكينات">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('الماكينات')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>الماكينات</h3>
+                        <p>ماكينات متنوعة للفنادق والمطاعم والمستشفيات</p>
+                        <div class="product-features">
+                            <span class="feature">تقنية حديثة</span>
+                            <span class="feature">كفاءة عالية</span>
+                            <span class="feature">سهولة الصيانة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lockers -->
+                <div class="product-card" data-category="furniture">
+                    <div class="product-image">
+                        <img src="images/1000363258.jpg" alt="الخزائن">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('الخزائن')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>الخزائن</h3>
+                        <p>خزائن تخزين للموظفين والضيوف في الفنادق والمؤسسات</p>
+                        <div class="product-features">
+                            <span class="feature">أمان عالي</span>
+                            <span class="feature">مساحة تخزين كبيرة</span>
+                            <span class="feature">تصميم عملي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baskets -->
+                <div class="product-card" data-category="cleaning">
+                    <div class="product-image">
+                        <img src="images/1000363258.jpg" alt="السلال">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary" onclick="requestQuote('السلال')">
+                                <i class="fas fa-calculator"></i>
+                                اطلب السعر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>السلال</h3>
+                        <p>سلال متنوعة للتخزين والتنظيم في الفنادق والمستشفيات</p>
+                        <div class="product-features">
+                            <span class="feature">مواد طبيعية</span>
+                            <span class="feature">تصميم جميل</span>
+                            <span class="feature">متعددة الاستخدامات</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <div class="no-results-content">
+                    <i class="fas fa-search"></i>
+                    <h3>لم يتم العثور على منتجات</h3>
+                    <p>جرب البحث بكلمات مختلفة أو تصفح جميع المنتجات</p>
+                    <button class="btn btn-primary" onclick="clearSearch()">عرض جميع المنتجات</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>لم تجد ما تبحث عنه؟</h2>
+                <p>تواصل معنا للحصول على منتجات مخصصة أو للاستفسار عن منتجات أخرى</p>
+                <div class="cta-actions">
+                    <a href="quote.html" class="btn btn-primary">
+                        <i class="fas fa-calculator"></i>
+                        اطلب عرض سعر مخصص
+                    </a>
+                    <a href="https://wa.me/201012006376" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        تواصل واتساب
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="images/1000363201.jpg" alt="رتاج للتجارة والتوريدات" class="footer-logo">
+                        <h3>رتاج للتجارة والتوريدات</h3>
+                        <p>شريكك الموثوق في توفير مستلزمات الفنادق والمستشفيات عالية الجودة</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                        <li><a href="quote.html">اطلب عرض سعر</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>معلومات التواصل</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>01012006376</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>01017310220</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>retajts@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>القاهرة الجديدة، مصر</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="https://wa.me/201012006376" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 رتاج للتجارة والتوريدات. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/201012006376" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
+

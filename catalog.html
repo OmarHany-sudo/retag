@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الكتالوج الكامل - رتاج للتجارة والتوريدات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .catalog-page {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .catalog-page img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .catalog-page img:hover {
+            transform: scale(1.02);
+        }
+        
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .page-number {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .catalog-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .catalog-header h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .catalog-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        .back-to-products {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-products:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .loading-placeholder {
+            background: #f0f0f0;
+            height: 600px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .catalog-grid {
+                padding: 0 1rem;
+            }
+            
+            .catalog-page img {
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="images/1000363201.jpg" alt="رتاج للتجارة والتوريدات" class="logo">
+                <span class="brand-text">رتاج للتجارة والتوريدات</span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                <li><a href="products.html" class="nav-link">المنتجات</a></li>
+                <li><a href="about.html" class="nav-link">من نحن</a></li>
+                <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+                <li><a href="quote.html" class="nav-link btn-outline">اطلب عرض سعر</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="https://wa.me/201234567890" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    واتساب
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Breadcrumb -->
+        <section class="breadcrumb">
+            <div class="container">
+                <nav class="breadcrumb-nav">
+                    <a href="index.html">الرئيسية</a>
+                    <span>/</span>
+                    <a href="products.html">المنتجات</a>
+                    <span>/</span>
+                    <span>الكتالوج الكامل</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <section class="catalog-section">
+            <div class="container">
+                <div class="catalog-header">
+                    <h1>الكتالوج الكامل</h1>
+                    <p>تصفح جميع منتجاتنا من مستلزمات الفنادق والمستشفيات</p>
+                    <a href="products.html" class="back-to-products">
+                        <i class="fas fa-arrow-right"></i>
+                        العودة للمنتجات
+                    </a>
+                </div>
+
+                <div class="catalog-grid" id="catalog-grid">
+                    <!-- سيتم تحميل الصور هنا بواسطة JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>رتاج للتجارة والتوريدات</h3>
+                    <p>شريكك الموثوق في توفير مستلزمات الفنادق والمستشفيات عالية الجودة</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+                        <p><i class="fas fa-envelope"></i> info@retag.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 رتاج للتجارة والتوريدات. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/201234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const catalogGrid = document.getElementById('catalog-grid');
+            
+            // قائمة بجميع صفحات الكتالوج
+            const catalogPages = [];
+            for (let i = 1; i <= 47; i++) {
+                const pageNumber = i.toString().padStart(4, '0');
+                const imageName = `Retaj Cataloug_page-${pageNumber}.jpg`;
+                catalogPages.push({
+                    number: i,
+                    image: `images/${encodeURIComponent(imageName)}`
+                });
+            }
+            
+            // إنشاء عناصر HTML لكل صفحة
+            catalogPages.forEach(page => {
+                const pageElement = document.createElement('div');
+                pageElement.className = 'catalog-page';
+                
+                pageElement.innerHTML = `
+                    <div class="page-number">صفحة ${page.number}</div>
+                    <div class="loading-placeholder" id="placeholder-${page.number}">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        جاري التحميل...
+                    </div>
+                    <img src="${page.image}" 
+                         alt="صفحة ${page.number} من الكتالوج" 
+                         style="display: none;"
+                         onload="this.style.display='block'; document.getElementById('placeholder-${page.number}').style.display='none';"
+                         onerror="document.getElementById('placeholder-${page.number}').innerHTML='<i class=\\"fas fa-exclamation-triangle\\"></i> خطأ في تحميل الصورة';">
+                `;
+                
+                catalogGrid.appendChild(pageElement);
+            });
+            
+            // إضافة زر طلب عرض سعر في النهاية
+            const ctaElement = document.createElement('div');
+            ctaElement.className = 'catalog-cta';
+            ctaElement.style.cssText = `
+                text-align: center;
+                margin-top: 3rem;
+                padding: 2rem;
+                background: var(--light-bg);
+                border-radius: 15px;
+            `;
+            
+            ctaElement.innerHTML = `
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">هل وجدت ما تبحث عنه؟</h3>
+                <p style="margin-bottom: 2rem; color: var(--text-light);">تواصل معنا الآن للحصول على أفضل الأسعار والعروض</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="quote.html" class="btn btn-primary">
+                        <i class="fas fa-calculator"></i>
+                        اطلب عرض سعر
+                    </a>
+                    <a href="https://wa.me/201234567890" class="btn btn-outline" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        تواصل واتساب
+                    </a>
+                </div>
+            `;
+            
+            catalogGrid.appendChild(ctaElement);
+        });
+    </script>
+</body>
+</html>
+
